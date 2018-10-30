@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title> 开心养车，专业汽车养护平台，为你解决汽车维修|保养|美容用车问题_互联网养车开创者</title>
+  <meta name="description" content="开心养车专注于互联网+车后服务领域，创新打造全国千城万店汽车保养品牌连锁，成为亿万车主首选的修车放心、养车省心的爱车生活平台。涵盖汽车清洗护理，空调，灯光，制动，动力，行驶等汽车各系统维修工作同时为车主提供汽车保养，汽车美容、汽车维修、汽车改装一站式服务。"
+  />
+  <meta name="keywords" content="汽车保养，汽车维修，汽车养护，汽车美容，深圳汽车维修，深圳汽车保养" />
+  <meta name="baidu-site-verification" content="qHIkNQaaAC" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/upkeep.css" rel="stylesheet">
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-paginator.js"></script>
+  <script src="js/template-web.js"></script>
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="header">
+      <div class="main">
+        <div class="fbc header-content">
+          <div class="hidden-xs">互联网养车开拓者，亿万车主首选的爱车生活平台</div>
+          <div class="visible-xs-block">亿万车主首选的爱车生活平台</div>
+          <div class="header-right fbc hidden-xs">
+            <div class="phone-box">
+                <img class="icon-phone" src="img/phone.png">
+                <span class="phone">客服咨询：0755-26668499</span>
+            </div>
+            <div class="app">
+                <img class="icon-app" src="img/mini.png">
+                <span class="appcode"><img src="img/kxycc.png"></span>小程序
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div>
+  <!-- 大屏幕导航 -->
+  <nav class="navbar navbar-default fcc main" id="navigation">
+    <div class="navbar-box fbc">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="开心养车" class="logo">
+        </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div>
+        <ul class="list-unstyled list-inline right-nav">
+          <li><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+          <li><a href="service.html">车主服务</a></li>
+          <li class="active"><a href="upkeep.html">养车百科</a></li>
+          <li ><a href="about.html">关于我们</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <section id="banner"></section>
+  <!-- 百科文章列表 -->
+  <section class="content main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="article-list col-lg-9 col-md-12">
+          <nav id="article-catsList">
+          </nav>
+          <div id="article-list"></div>
+          <div id="Paginator" style="text-align: center"> <ul id="pageLimit"></ul> </div>
+          <!-- <div class="message-divider fcc">没有更多啦</div> -->
+        </div>
+        <div class="col-lg-offset-1 col-lg-2 col-md-12 aside">
+          <aside class="hot-articles">
+            <div class="aside-title">热门文章</div>
+            <iframe id="hot-articles" name="newPosts" src="hotArticles.html" frameborder="0" scrolling="no"></iframe>
+          </aside>
+          <aside class="hot-remarks">
+            <div class="aside-title">热门标签</div>
+            <div id="hot-remarks"></div>
+          </aside>
+          <aside class="hot-products">
+            <div class="aside-title">热门产品</div>
+            <div id="hot-products"></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 网站底部 -->
+  <!-- 网站底部 -->
+  <footer id="footer">
+      <section class="list main">
+        <div class="footer-list container-fluid fs">
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车保养</h3>
+            <ul class="list-unstyled">
+                <li>机油保养</li>
+                <li>刹车保养</li>
+                <li>发动机保养</li>
+                <li>燃油管路保养</li>
+                <li>火花塞的保养</li>
+                <li>门边铰链保养</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车维修</h3>
+            <ul class="list-unstyled">
+                <li>钣金喷漆</li>
+                <li>汽车电工</li>
+                <li>换油中心</li>
+                <li>机修修理汽车</li>
+                <li>四轮定位</li>
+                <li>动平衡</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车美容</h3>
+            <ul class="list-unstyled">
+                <li>车身美容</li>
+                <li>内饰美容</li>
+                <li>漆面处理</li>
+                <li>汽车防护</li>
+                <li>汽车精品</li>
+                <li>防爆隔热膜</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">相关链接</h3>
+            <ul class="list-unstyled">
+                <li><a target="_blank" href="http://blog.sina.com.cn/u/6617578702">开心养车论坛</a></li>
+                <li><a target="_blank" href="http://author.baidu.com/home/1607383568695712">开心养车百家号</a></li>
+                <li><a target="_blank" href="https://weibo.com/p/1006066599798083">开心养车微博</a></li>
+                <li><a target="_blank" href="https://chejiahao.autohome.com.cn/My   ">开心养车车家号</a></li>
+                <li><a target="_blank" href="https://www.zhihu.com/people/kai-xin-yang-che-40/posts">开心养车知乎号</a></li>
+                
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12 fcsc">
+            <h3 class="white-color item-title text-center">微信公众号</h3>
+            <img src="img/kxyc.png" alt="开心养车公众号">
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12 fcsc">
+              <h3 class="white-color item-title text-center">应用平台</h3>
+              <img src="img/kxycc.png" alt="开心养车C小程序">
+          </div>
+        </div>
+      </section>
+      <div class="divider main"></div>
+      <div class="footer-desc fccc main">
+        <p>全国咨询热线: <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 0755 - 266 68499</p>
+        <p>地址：广东省深圳市南山区中国科技开发院5楼502室</p>
+        <p>深圳公安备案号：粤ICP备18028838号</p>
+      </div>
+  </footer>
+  
+  <!-- 轮播图模板 -->
+  <script type="text/html" id="banner-slider">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          {{each imgs value i}}
+          {{if i==0}}
+          <li data-target="#carousel-example-generic" data-slide-to="{{i}}" class="dots active"></li>
+          {{else if i!=0}}
+          <li data-target="#carousel-example-generic" data-slide-to="{{i}}" class="dots"></li>
+          {{/if}}
+          {{/each}}
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          {{each imgs img i}}
+          {{if i==0}}
+          <div class="item active slider-item">
+            <a href={{img.newsUrl}}>
+              <img class="slider-img img-responsive" src={{img.imgUrl}} alt={{img.alt}}>
+              <div class="carousel-caption">
+              </div>
+            </a>   
+          </div>
+          {{else if i!=0}}
+          <div class="item slider-item">
+            <a href={{img.newsUrl}}>
+              <img class="slider-img img-responsive" src={{img.imgUrl}} alt={{img.alt}}>
+              <div class="carousel-caption">
+              </div>
+            </a>  
+          </div>
+          {{/if}}
+          {{/each}}
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </script>
+
+  <!-- 文章类别导航 -->
+  <script type="text/html" id="article-cats">
+    <ul class="list-unstyled list-inline">
+      {{each cats cat i}}
+      {{if i==activeNum}}
+      <li class="active"><a href={{cat.url}}>{{cat.text}}</a></li>
+      {{else if i!=activeNum}}
+      <li><a href={{cat.url}}>{{cat.text}}</a></li>
+      {{/if}}
+      {{if i!=cats.length-1}}
+      <li class="divider"><span>/</span></li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </script>
+
+  <!-- 文章列表模板 -->
+  <script type="text/html" id="articles">
+    {{each articles art i}}
+    <article class="article">
+      <a href={{art.newsUrl}}>
+        <div class="article-main fs">
+          <div class="article-pic"><img src={{art.coverImgUrl}} alt=""></div>
+          <div class="article-text fc">
+            <h4 class="article-title">{{art.title}}</h4>
+            <p class="article-desc">{{art.summary}}</p>
+          </div>
+        </div>
+      </a>
+      <div class="article-info frc">
+        <div class="fbc"><img src="img/time.png" alt=""><span>{{art.createDate | dateFormat}}</span></div>
+        <!-- <div class="fbc viewcount"><img src="img/viewcount.png" alt=""><span>{{art.readNum}}</span></div> -->
+      </div>
+    </article>
+    {{/each}}
+  </script>
+
+  <!-- 热门标签 -->
+  <script type="text/html" id="article-remarks">
+    <div class="remarks-content">
+      <div class="row">
+        {{each remarks remark i}}
+          <div class="col-lg-6  col-sm-3 col-xs-6"><a href={{remark.url}}><div class="item fccc">{{remark.text}}</div></a></div>
+        {{/each}}
+      </div>
+    </div>
+  </script>
+
+  <!-- 热门产品 -->
+  <script type="text/html" id="article-products">
+    <div class="products-content">
+      <div class="row">
+        {{each products pro i}}
+        <div class="col-lg-6 col-md-3 col-sm-3 col-xs-6"><a href={{pro.url}}><div class="item fccc">{{pro.text}}</div></a></div>
+        {{/each}}
+      </div>
+    </div>
+  </script>
+
+  <script type="text/javascript">
+    renderBannerSlider();
+    renderArticleCats();
+    renderHotRemark();
+    renderHotProduct();
+    renderArticleList(1);
+    // 获取文章总数
+    
+    // var artLen = articlesListData.articles.length
+    var artLen = 11
+    var pages = Math.floor(artLen/10) + (artLen%10>0?1:0)
+    console.log('pages',pages)
+    $('#pageLimit').bootstrapPaginator({    
+        currentPage: 1,    
+        totalPages: pages,    
+        size:"normal",    
+        bootstrapMajorVersion: 3,    
+        alignment:"right",    
+        numberOfPages:5,    
+        itemTexts: function (type, page, current) {        
+            switch (type) {            
+            case "first": return "首页";            
+            case "prev": return "上一页";            
+            case "next": return "下一页";            
+            case "last": return "末页";            
+            case "page": return page;
+            }
+        },
+        onPageChanged: function (type, oldPage, newPage){
+          document.documentElement.scrollTop = 0
+          renderArticleList(newPage)
+        }
+    });
+
+    function renderBannerSlider() {
+      //开心养车轮播banner图数据
+      var BannerData = {
+        imgs: [
+          {
+            newsUrl:'#',
+            imgUrl:'img/banner-2.png',
+            alt: '',
+            type: 1
+          },
+          {
+            newsUrl:'#',
+            imgUrl:'img/banner-1.png',
+            alt: '',
+            type: 1
+          },
+          {
+            newsUrl:'#',
+            imgUrl:'img/banner-3.png',
+            alt: '',
+            type: 1
+          }
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var bannerHtml = template("banner-slider", BannerData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('banner').innerHTML = bannerHtml
+    }
+
+    function renderArticleCats() {
+      // 文章类型数据
+      var articleCatsData = {
+        activeNum: 1,
+        cats: [
+        {
+            url:'upkeep.html',
+            text:'推荐'         
+          },
+          {
+            url:'auto-news.html',
+            text:'汽车资讯'
+          },
+          {
+            url:'auto-upkeep.html',
+            text:'汽车保养'
+          },
+          {
+            url:'auto-fix.html',
+            text:'汽车维修'
+          },
+          {
+            url:'auto-beauty.html',
+            text:'汽车美容'
+          },
+          {
+            url:'auto-products.html',
+            text:'汽车用品'
+          },
+          {
+            url:'auto-forsale.html',
+            text:'特惠养车'
+          },
+          {
+            url:'auto-examples.html',
+            text:'保养案例'
+          },
+          {
+            url:'auto-parts.html',
+            text:'保养配件'
+          },
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var articleCatsHtml = template("article-cats", articleCatsData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('article-catsList').innerHTML = articleCatsHtml
+    }
+
+    function renderArticleList(page) {
+      template.defaults.imports.dateFormat = function(timestamp){
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        var D = date.getDate() + ' ';
+        var h = date.getHours() + ':';
+        var m = date.getMinutes()<10? '0'+ (date.getMinutes()):date.getMinutes();
+        return Y+M+D+h+m
+      }
+      //文章列表数据
+      var data = [
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "1车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "2车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+              {
+                newsUrl:'articles.html',
+                coverImgUrl:'img/shops01.png',
+                title: "2车漆镀晶有必要吗？车漆镀晶多少钱？",
+                summary: "汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？需要多少钱？汽车车漆镀晶是一种可靠的漆面密封技术，这样可以搞笑持久的保护车漆，可以保护车漆在使用6个月之后依然完美无损，那么车漆镀晶有必要吗？",
+                createDate: "2018-04-10 15:52",
+              },
+            ]
+      var list = data.slice((page-1)*10,(page*10)-1)
+      var articlesListData = {
+          articles: list
+      };
+      // console.log('len',articlesListData.articles.length);
+
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var articlesListHtml = template("articles", articlesListData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('article-list').innerHTML = articlesListHtml
+    }
+
+    function renderHotRemark() {
+      //右侧热门标签
+      var remarksData = {
+        remarks: [
+        {
+            url:'auto-news.html',
+            text:'汽车资讯'
+          },
+          {
+            url:'auto-upkeep.html',
+            text:'汽车保养'
+          },
+          {
+            url:'auto-fix.html',
+            text:'汽车维修'
+          },
+          {
+            url:'auto-beauty.html',
+            text:'汽车美容'
+          },
+          {
+            url:'auto-products.html',
+            text:'汽车用品'
+          },
+          {
+            url:'auto-forsale.html',
+            text:'特惠养车'
+          },
+          {
+            url:'auto-examples.html',
+            text:'保养案例'
+          },
+          {
+            url:'auto-parts.html',
+            text:'保养配件'
+          },
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var hotRemarksHtml = template("article-remarks", remarksData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('hot-remarks').innerHTML = hotRemarksHtml
+    }
+
+    function renderHotProduct() {
+      //右侧热门产品
+      var productData = {
+        products: [
+          {
+            url:'#',
+            text: "玻璃修复"
+          },
+          {
+            url:'#',
+            text: "划痕修复"
+          },
+          {
+            url:'#',
+            text: "汽车镀晶"
+          },
+          {
+            url:'#',
+            text: "凹陷修复"
+          },
+          {
+            url:'#',
+            text: "四轮定位"
+          },
+          {
+            url:'#',
+            text: "车漆修复"
+          }
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var hotProductsHtml = template("article-products", productData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('hot-products').innerHTML = hotProductsHtml
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title> 开心养车，专业汽车养护平台，为你解决汽车维修|保养|美容用车问题_互联网养车开创者</title>
+  <meta name="description" content="开心养车专注于互联网+车后服务领域，创新打造全国千城万店汽车保养品牌连锁，成为亿万车主首选的修车放心、养车省心的爱车生活平台。涵盖汽车清洗护理，空调，灯光，制动，动力，行驶等汽车各系统维修工作同时为车主提供汽车保养，汽车美容、汽车维修、汽车改装一站式服务。"
+  />
+  <meta name="keywords" content="汽车保养，汽车维修，汽车养护，汽车美容，深圳汽车维修，深圳汽车保养" />
+  <meta name="baidu-site-verification" content="qHIkNQaaAC" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/mul-Carousel.css" rel="stylesheet">
+  <link href="css/flexible-bootstrap-carousel.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/template-web.js"></script>
+  <script type="text/javascript" src="js/flexible-bootstrap-carousel-4.js"></script>
+  <script type="text/javascript" src="js/mul-carousel.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="header">
+      <div class="main">
+        <div class="fbc header-content">
+          <div class="hidden-xs">互联网养车开拓者，亿万车主首选的爱车生活平台</div>
+          <div class="visible-xs-block">亿万车主首选的爱车生活平台</div>
+          <div class="header-right fbc hidden-xs">
+            <div class="phone-box">
+                <img class="icon-phone" src="img/phone.png">
+                <span class="phone">客服咨询：0755-26668499</span>
+            </div>
+            <div class="app">
+                <img class="icon-app" src="img/mini.png">
+                <span class="appcode"><img src="img/kxycc.png"></span>小程序
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div>
+  <!-- 大屏幕导航 -->
+  <nav class="navbar navbar-default fcc main" id="navigation">
+    <div class="navbar-box fbc">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="开心养车" class="logo">
+        </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div>
+        <ul class="list-unstyled list-inline right-nav">
+          <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+          <li><a href="service.html">车主服务</a></li>
+          <li><a href="upkeep.html">养车百科</a></li>
+          <li><a href="about.html">关于我们</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- 轮播图 -->
+  <section id="banner"></section>
+  <!-- 我们的服务 -->
+  <section id="service" class="main">
+    <div class="section-title">
+      <h2 class="title">我们的服务</h2>
+      <p class="desc text-uppercase">our service</p>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-dot large"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+    <div id="service-list"></div>
+  </section>
+  <!-- 我们的优势 -->
+  <section id="advantage" class="main">
+    <img src="img/homebg.png" alt="" >
+    <div class="content">
+    <div class="section-title white-color">
+        <h2 class="title">我们的优势</h2>
+        <p class="desc text-uppercase">our advantage</p>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-dot large"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+      <div class="advantage-desc">
+        <p class="text-center lead white-color">
+            开心养车是中汽联(深圳)控股有限公司基于16年全国品牌连锁630多店（九九汽车服务），以及10多年ERP+CRM研发经验、3年多智能互联O2O平台的运营实践，创新打造全国千城万店品牌连锁，成为亿万车主首选的修车放心、养车省心的爱车生活平台。
+        </p>
+      </div>
+      <div class="advantage-list fcc">
+        <div class="item border fccc">
+          <img src="img/convenience.png" alt="">
+          <p class="item-feature">更方便</p>
+          <p class="white-color">小程序在线下单</p>
+        </div>
+        <div class="item border fccc">
+          <img src="img/less.png" alt="">
+          <p class="item-feature">更省钱</p>
+          <p class="white-color">优于4s店30%</p>
+        </div>
+        <div class="item border fccc">
+          <img src="img/profession.png" alt="">
+          <p class="item-feature">更专业</p>
+          <p class="white-color">员工定期培训</p>
+        </div>
+        <div class="item fccc">
+          <img src="img/guarantee.png" alt="">
+          <p class="item-feature">更保障</p>
+          <p class="white-color">7天满意付款</p>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <!-- 荣誉资质 -->
+  <section id="slider" class="honner main">
+    <div class="section-title">
+      <h2 class="title">荣誉资质</h2>
+      <p class="desc text-uppercase">honour</p>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-dot large"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+    <div id="honours-list" class="container-fluid"></div>
+  </section>
+  <!-- 合作平台 -->
+  <section class="partners main">
+    <div class="section-title">
+        <h2 class="title">合作平台</h2>
+        <p class="desc text-uppercase">cooperation platform</p>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-dot large"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+      <div id="platform-list"></div>
+  </section>
+  <!-- 网站底部 -->
+  <footer id="footer">
+      <section class="list main">
+        <div class="footer-list container-fluid fs">
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车保养</h3>
+            <ul class="list-unstyled">
+                <li>机油保养</li>
+                <li>刹车保养</li>
+                <li>发动机保养</li>
+                <li>燃油管路保养</li>
+                <li>火花塞的保养</li>
+                <li>门边铰链保养</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车维修</h3>
+            <ul class="list-unstyled">
+                <li>钣金喷漆</li>
+                <li>汽车电工</li>
+                <li>换油中心</li>
+                <li>机修修理汽车</li>
+                <li>四轮定位</li>
+                <li>动平衡</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">汽车美容</h3>
+            <ul class="list-unstyled">
+                <li>车身美容</li>
+                <li>内饰美容</li>
+                <li>漆面处理</li>
+                <li>汽车防护</li>
+                <li>汽车精品</li>
+                <li>防爆隔热膜</li>
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <h3 class="white-color item-title">相关链接</h3>
+            <ul class="list-unstyled">
+                <li><a target="_blank" href="http://blog.sina.com.cn/u/6617578702">开心养车论坛</a></li>
+                <li><a target="_blank" href="http://author.baidu.com/home/1607383568695712">开心养车百家号</a></li>
+                <li><a target="_blank" href="https://weibo.com/p/1006066599798083">开心养车微博</a></li>
+                <li><a target="_blank" href="https://chejiahao.autohome.com.cn/My   ">开心养车车家号</a></li>
+                <li><a target="_blank" href="https://www.zhihu.com/people/kai-xin-yang-che-40/posts">开心养车知乎号</a></li>
+                
+            </ul>
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12 fcsc">
+            <h3 class="white-color item-title text-center">微信公众号</h3>
+            <img src="img/kxyc.png" alt="开心养车公众号">
+          </div>
+          <div class="item col-lg-2 col-md-4 col-sm-6 col-xs-12 fcsc">
+              <h3 class="white-color item-title text-center">应用平台</h3>
+              <img src="img/kxycc.png" alt="开心养车C小程序">
+          </div>
+        </div>
+      </section>
+      <div class="divider main"></div>
+      <div class="footer-desc fccc main">
+        <p>全国咨询热线: <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 0755 - 266 68499</p>
+        <p>地址：广东省深圳市南山区中国科技开发院5楼502室</p>
+        <p>深圳公安备案号：粤ICP备18028838号</p>
+      </div>
+  </footer>
+  
+  <!-- 轮播图模板 -->
+  <script type="text/html" id="banner-slider">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          {{each imgs value i}}
+          {{if i==0}}
+          <li data-target="#carousel-example-generic" data-slide-to="{{i}}" class="dots active"></li>
+          {{else if i!=0}}
+          <li data-target="#carousel-example-generic" data-slide-to="{{i}}" class="dots"></li>
+          {{/if}}
+          {{/each}}
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          {{each imgs img i}}
+          {{if i==0}}
+          <div class="item active slider-item">
+            <a href={{img.newsUrl}}>
+              <img class="slider-img img-responsive" src={{img.imgUrl}}  alt={{img.alt}}>
+              <div class="carousel-caption">
+              </div>
+            </a>   
+          </div>
+          {{else if i!=0}}
+          <div class="item slider-item">
+            <a href={{img.newsUrl}}>
+              <img class="slider-img img-responsive" src={{img.imgUrl}}>
+              <div class="carousel-caption">
+              </div>
+            </a>  
+          </div>
+          {{/if}}
+          {{/each}}
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </script>
+
+  <!-- 服务列表 -->
+  <script type="text/html" id="services">
+      <div class="container-fluid" >
+        <div class="row fsc">
+        <!-- Wrapper for slides -->
+          {{each services1 ser i}}
+          <a href={{ser.url}}>
+            <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 service-item fccc">
+              <img class="default" src={{ser.icon}} alt={{ser.text}}>
+              <img class="active" src={{ser.hover}} alt={{ser.text}}>
+              <div class="divider"></div>
+              <h4 class="name">{{ser.text}}</h4>
+            </div>
+          </a>
+          {{/each}}
+        </div>
+        <div class="row fsc">
+        <!-- Wrapper for slides -->
+          {{each services2 ser i}}
+          <a href={{ser.url}}>
+              <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 service-item fccc">
+                <img class="default" src={{ser.icon}} alt={{ser.text}}>
+                <img class="active" src={{ser.hover}} alt={{ser.text}}>
+                <div class="divider"></div>
+                <h4 class="name">{{ser.text}}</h4>
+              </div>
+            </a>
+          {{/each}}
+        </div>
+      </div>
+  </script>
+
+  <!-- 合作平台列表 -->
+  <script type="text/html" id="partners">
+      <div class="container-fluid" >
+        <div class="row fbc">
+        <!-- Wrapper for slides -->
+          <!-- <div class="col-lg-2 col-sm-0 col-xs-0 " ></div> -->
+          {{each partners par i}}
+          <div class="partners-item fccc">
+            <div class="parter-box fccc">
+              <img src={{par.src}} alt="">
+            </div>
+            <p class="name">{{par.name}}</p>
+          </div>
+          {{/each}}
+          <!-- <div class="col-lg-2 col-sm-0 col-xs-0"></div> -->
+        </div>
+      </div>
+  </script>
+
+    <!-- 荣誉资质轮播模板 -->
+  <script type="text/html" id="honours">
+    <div class="carousel-example">
+        <!-- FLEXIBLE BOOTSTRAP CAROUSEL -->
+        <div id="simple-content-carousel" class="carousel flexible slide" data-ride="carousel" data-interval="3000" data-wrap="true">           
+          <div class="items">
+            {{each imgs img i}}
+            <div class="flex-item fcc">
+              <img class="img-responsive" src={{img.imgUrl}} alt={{img.alt}}/>
+            </div>
+            {{/each}}
+          </div>
+          
+          <div class="carousel-inner" role="listbox">
+          </div>
+          <a class="left carousel-control" href="#simple-content-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#simple-content-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      renderBannerSlider();
+      renderServiceList();
+      renderPlatformList();
+      renderHonoursList();
+    })
+    
+    function renderBannerSlider() {
+      //首页轮播banner图数据
+      var BannerData = {
+        imgs: [
+          {
+            newsUrl:'#',
+            imgUrl:'img/banner-1.png',
+            alt: '',
+            type: 1
+          }
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var bannerHtml = template("banner-slider", BannerData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('banner').innerHTML = bannerHtml
+    }
+
+    function renderServiceList() {
+      //我们的服务数据
+      var serviceData = {
+        services1: [
+          {
+            url:'#',
+            hover:'img/maintain-active.png',
+            icon: 'img/maintain.png',
+            text: '小保养'
+          },
+          {
+            url:'#',
+            hover:'img/keep-active.png',
+            icon: 'img/keep.png',
+            text: '大保养'
+          },
+          {
+            url:'#',
+            hover:'img/EPC-clean-active.png',
+            icon: 'img/EPC-clean.png',
+            text: '气节门清洗'
+          },
+          {
+            url:'#',
+            hover:'img/fire-active.png',
+            icon: 'img/fire.png',
+            text: '更换火花塞'
+          },
+        ],
+        services2:[
+        {
+            url:'#',
+            hover:'img/tire-active.png',
+            icon: 'img/tire.png',
+            text: '轮胎/轮铃养护'
+          },
+          {
+            url:'#',
+            hover:'img/oil-active.png',
+            icon: 'img/oil.png',
+            text: '更换刹车油'
+          },
+          {
+            url:'#',
+            hover:'img/battery-active.png',
+            icon: 'img/battery.png',
+            text: '更换蓄电池'
+          },
+          {
+            url:'#',
+            hover:'img/motive-active.png',
+            icon: 'img/motive.png',
+            text: '发动机舱养护'
+          }
+        ]
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var serviceHtml = template("services", serviceData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('service-list').innerHTML = serviceHtml
+    }
+
+    function renderPlatformList() {
+      //合作平台数据
+      var partnersData = {
+        partners: [
+          {
+            src: 'img/union.png',
+            name: '中国银联'
+          },
+          {
+            src: 'img/picc.png',
+            name: '中国人保'
+          },
+          {
+            src: 'img/icbc.png',
+            name: '工商银行'
+          },
+          {
+            src: 'img/pingan.png',
+            name: '平安保险'
+          },
+          {
+            src: 'img/tencent.png',
+            name: '腾讯'
+          },
+          {
+            src: 'img/mallparking.png',
+            name: '小猫停车'
+          },
+          {
+            src: 'img/rainbow.png',
+            name: '天虹'
+          },
+          {
+            src: 'img/ccb.png',
+            name: '建设银行'
+          }
+        ]
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var partnersHtml = template("partners", partnersData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('platform-list').innerHTML = partnersHtml
+    }
+
+    function renderHonoursList() {
+      //荣誉资质数据
+      var honoursData = {
+        imgs: [
+          {
+            imgUrl:'img/honour01.png',
+            alt: '',
+          },
+          {
+            imgUrl:'img/honour02.jpg',
+            alt: '开心养车门店图片'        
+          },
+          {
+            imgUrl:'img/honour07.jpg',
+            alt: '开心养车门店图片'  
+          },
+          {
+            imgUrl:'img/honour05.jpg',
+            alt: '开心养车门店图片'  
+          },
+          {
+            imgUrl:'img/honour04.jpg',
+            alt: '开心养车门店图片'  
+          },
+          {
+            imgUrl:'img/honour03.jpg',
+            alt: '开心养车门店图片'  
+          },
+          {
+            imgUrl:'img/honour06.jpg',
+            alt: '开心养车门店图片'  
+          },
+          
+          {
+            imgUrl:'img/honour08.jpg',
+            alt: '开心养车门店图片'  
+          }
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      var honoursHtml = template("honours", honoursData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('honours-list').innerHTML = honoursHtml
+    }
+
+  </script>
+</body>
+
+</html>

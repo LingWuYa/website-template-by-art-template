@@ -1,0 +1,29 @@
+#character {
+  margin-top: 40px;
+}
+
+#character .item .text {
+  color: #111111;
+  font-size: 20px;
+  margin: 25px 0 30px;
+}
+#map {
+  width:100%;
+  height:532px;
+  margin: 125px 0 100px 0;
+}
+
+#about-us .grey-bg {
+  width: 100%;
+  background: #FAFAFA;
+}
+
+#founder .grey-bg {
+  width: 100%;
+  background: #FAFAFA;
+}
+#founder, #about-us p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 48px;
+}

@@ -1,0 +1,108 @@
+	/* Carousel */
+	.carousel-example {
+		padding: 20px 0 0px 0;
+	}
+	
+	#complicated-content-carousel .carousel-control {
+    /* display: block; */
+		position: absolute;
+		top: -20px;
+		/* right: 0; */
+		left: 35px;
+		bottom: auto;
+    width: 14px;
+    /* height: auto; */
+		font-size: 25px;
+		color: #3c3c3c !important;
+		opacity: 1;
+	}
+	
+	.carousel-example .carousel-control.left,
+	.carousel-example .carousel-control.right {
+		background-image: none;
+	}
+	
+	.carousel-example .carousel-control.left {
+		left: 1.8%;
+	}
+	.carousel-example .carousel-control.right {
+		right: 1.8%;
+	}
+	
+	#complicated-content-carousel .index {
+		position: absolute;
+		top: -70px;
+		right: 0;
+		font-size: 16px;
+		color: #3c3c3c;
+	}
+	
+	#complicated-content-carousel .flex-item {
+		position: relative;
+		display: inline-block;
+		width: 426px;
+		height: 403px;
+		/* width: 320px;
+		height: 380px; */
+		/* padding: 16px 13px; */
+		padding: 16px 5px;
+		background-color: #f5f6f7;
+		border: 6px solid #f5f6f7;
+	}
+	
+	#complicated-content-carousel .flex-item:hover,
+	#complicated-content-carousel .flex-item:focus {
+		border: 6px solid #d2d4d5;
+		border-radius: 3px;
+	}
+	
+	
+	.size {
+		position: absolute;
+		padding: 0;
+		cursor: pointer;
+		transition: all .35s;
+	}
+	
+	.size.shown {
+		padding: 0 5px 5px 5px;
+		background-color: #fff;
+		border-radius: 2px;
+	}
+	
+	.size.shown .option:hover {
+		background-color: #f5f6f7;
+	}
+	
+	.carousel-control {
+		width: 50px;
+		height: 50px;
+		top: 50%;
+		transform: translateY(-50%);
+		/* left: 50%; */
+		font-size: 30px;
+		text-align: center;
+		opacity: 1;
+	}
+	
+	a.carousel-control.left,
+	a.carousel-control.right {
+		background-image: none;
+		opacity: 1;
+		text-align: center;
+	}
+
+/* MEDIA QUERIES */
+	/* styles for phones' displays */
+	@media only screen and (max-width: 350px) {
+		#complicated-content-carousel .flex-item {
+			width: 300px;
+		}
+	}
+	
+	/* styles for medium size displays */
+	@media only screen and (min-width: 992px) and (max-width: 1199px) {
+		#complicated-content-carousel .flex-item {
+			width: 300px;
+		}
+	}

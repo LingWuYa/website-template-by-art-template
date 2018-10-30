@@ -1,0 +1,134 @@
+.content {
+  padding-top: 27px;
+}
+
+#article-catsList {
+  width: 100%;
+}
+#article-catsList li{
+  font-size: 18px;
+}
+#article-catsList .active a{
+  color: #1895F5;
+}
+#article-catsList li.divider{
+  margin: 0 -8px;
+  color: #CCCCCC;
+}
+.aside aside {
+  margin-bottom: 30px;
+}
+.aside .aside-title {
+  height: 20px;
+  padding: 0 7px;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+  border-left: 5px solid #333;
+  margin-bottom: 30px;
+}
+#hot-articles{
+  height: 610px;
+}
+#hot-articles .left-dots {
+  margin-right: 16px;
+  position: relative;
+  bottom: 25px;
+}
+#hot-articles .left-dots .dot {
+  width:7px;
+  height:7px;
+  background:rgba(102,102,102,1);
+  border-radius:50%;
+}
+#hot-articles .left-dots .line {
+  width:3px;
+  height:70px;
+  background:rgba(230,230,230,1);
+}
+.remarks-content .row, .products-content .row {
+  margin-right: -60px;
+}
+#hot-products .item, #hot-remarks .item {
+  min-width: 110px;
+  height:36px;
+  border:1px solid rgba(153,153,153,1);
+  border-radius:18px;
+  margin:5px 2px;
+}
+
+#hot-articles .right-list .art-title{
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+  font-size:16px;
+  color:rgba(51,51,51,1);
+}
+#hot-articles .right-list .art-info{
+  height:13px;
+  font-size:16px;
+  color:rgba(153,153,153,1);
+  line-height:24px;
+  margin: 11px 0 29px;
+}
+
+#article-list .article {
+  border-bottom: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.article .article-pic {
+  width: 240px;
+  height: 150px;
+}
+.article .article-pic img{
+  width: 240px;
+  height: 150px;
+}
+.article  .article-text {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.article  .article-title {
+  height:26px;
+  font-size:26px;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-bottom: 20px;
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
+.article  .article-desc {
+  font-size:18px;
+  color:rgba(102,102,102,1);
+  line-height:29px;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3; 
+}
+.article  .article-info {
+  /* height:13px; */
+  font-size:16px;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:40px;
+}
+.article  .article-info img{
+  height:20px;
+  margin-right: 3px;
+}
+.article  .article-info .viewcount{
+  margin-left:42px;
+}
+
+.message-divider {
+  height:23px;
+  font-size:24px;
+  color:rgba(153,153,153,1);
+  margin: 47px 0 62px;
+}

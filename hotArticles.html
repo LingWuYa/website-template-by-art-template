@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title> 开心养车，专业汽车养护平台，为你解决汽车维修|保养|美容用车问题_互联网养车开创者</title>
+  <meta name="description" content="开心养车专注于互联网+车后服务领域，创新打造全国千城万店汽车保养品牌连锁，成为亿万车主首选的修车放心、养车省心的爱车生活平台。涵盖汽车清洗护理，空调，灯光，制动，动力，行驶等汽车各系统维修工作同时为车主提供汽车保养，汽车美容、汽车维修、汽车改装一站式服务。"
+  />
+  <meta name="keywords" content="汽车保养，汽车维修，汽车养护，汽车美容，深圳汽车维修，深圳汽车保养" />
+  <meta name="baidu-site-verification" content="qHIkNQaaAC" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/upkeep.css" rel="stylesheet">
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/template-web.js"></script>
+
+</head>
+
+<body>
+    <div id="hot-articles"></div>
+
+    <!-- 热门文章 -->
+    <script type="text/html" id="article-hotArts">
+      <div class="list-content flc">
+        <div class="left-dots fcc">
+          <ul class="list-unstyled">
+            {{each articles art i}}
+            <li>
+              <div class="dot-item fccc">
+                <div class="dot"></div>
+                {{if i!=articles.length-1}}
+                <div class="line"></div>
+                {{/if}}
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <ul class="list-unstyled right-list">
+          {{each articles art i}}
+          <li>
+            <div class="fc">
+              <a href={{art.newsUrl}} target="_blank"><div class="art-title">{{art.title}}</div></a>
+              <div class="art-info">
+                <span>{{art.createDate | dateFormat}}</span>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </script>  
+  
+
+  <script type="text/javascript">
+    renderHotList();
+
+    function renderHotList() {
+      //右侧热门文章
+      template.defaults.imports.dateFormat = function(timestamp){
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        var D = date.getDate() + ' ';
+        var h = date.getHours() + ':';
+        var m = date.getMinutes()<10? '0'+ (date.getMinutes()):date.getMinutes();
+        return Y+M+D+h+m
+      }
+      var hotArticlesData = {
+        articles: [
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          },
+          {
+            newsUrl:'#',
+            title: "车漆镀晶有必要吗？",
+            createDate: "2018-04-10 15:52",
+          }
+        ],
+      }
+      /**
+       * 利用模板引擎 引用数据填充到模板中
+       *
+       * 参数一：模板id
+       * 参数二：数据
+       */
+      
+      var hotArticlesHtml = template("article-hotArts", hotArticlesData);
+
+      //将返回的模板结果添加到界面中
+      document.getElementById('hot-articles').innerHTML = hotArticlesHtml
+    }
+
+</script>
+</body>
+
+</html>
